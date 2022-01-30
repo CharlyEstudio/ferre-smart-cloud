@@ -12,7 +12,7 @@ export const dbService = [
       return {
         timezone: 'Z',
         trace: true,
-        logging: config.get(Keys.TYPEORM_LOGGING),
+        logging: config.get(Keys.TYPEORM_LOGGING) === 'true',
         ssl: false,
         type: config.get(Keys.TYPEORM_CONNECTION),
         host: config.get(Keys.DATABASE_HOST),

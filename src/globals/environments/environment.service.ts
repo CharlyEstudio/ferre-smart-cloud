@@ -16,7 +16,7 @@ export class EnvironmentService {
         process.exit(0);
       }
 
-      this.log.log('Environment Cargado');
+      this.log.debug('Environment Cargado');
       config({ path: envFilePath });
     }
   }

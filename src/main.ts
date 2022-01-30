@@ -6,7 +6,10 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 const logger: Logger = new Logger('FerreSmart Cloud');
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, { cors: true });
+  const app = await NestFactory.create(AppModule, {
+    cors: true,
+    logger: ['error', 'warn', 'debug'],
+  });
 
   // Pipes
   app.useGlobalPipes(
@@ -34,7 +37,7 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
   await app.listen(process.env.PORT);
-  logger.log(
+  logger.debug(
     `Micro Servicio: ${process.env.MICROSERVICIO}::${process.env.HOST}:${process.env.PORT}`,
   );
 }
