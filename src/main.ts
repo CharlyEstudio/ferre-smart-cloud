@@ -25,7 +25,9 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .addBearerAuth()
     .setTitle('FerreSmart Cloud')
-    .setDescription(process.env.npm_package_description)
+    .setDescription(
+      'Sistema de Ventas para Ferreterías y sus servicios generales.',
+    )
     .setVersion(process.env.npm_package_version)
     .addTag('user')
     .addTag('oauth')

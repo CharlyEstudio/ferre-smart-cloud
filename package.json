@@ -1,7 +1,7 @@
 {
   "name": "ferresmart-cloud",
   "version": "0.0.1",
-  "description": "'<p align=\"center\"><a href=\"http://ferrex.com/\" target=\"blank\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/5/50/FREE_NOW_Logo.png\" width=\"320\" alt=\"Ferrex\" /></a></p>",
+  "description": "<p align=\"center\"><a href=\"http://ferrex.com/\" target=\"blank\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/5/50/FREE_NOW_Logo.png\" width=\"320\" alt=\"Ferrex\" /></a></p>",
   "author": "FerreSmart",
   "private": true,
   "license": "UNLICENSED",
