@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { User } from '@app/users/entities/user.entity';
-import { UserRepository } from '@app/users/repository/user.repository';
+import { User } from '@app/core/users/entities/user.entity';
+import { UserRepository } from '@app/core/users/repository/user.repository';
 
 @Injectable()
 export class UsersService {
@@ -18,6 +18,10 @@ export class UsersService {
 
   findOne(id: number): Promise<User> {
     return this.usersRepository.findOne(id);
+  }
+
+  findOneByUsername(username: string): Promise<User> {
+    return this.usersRepository.findOne({ where: { username } });
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
