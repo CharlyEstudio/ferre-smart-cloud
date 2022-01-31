@@ -12,14 +12,14 @@ async function bootstrap() {
   });
 
   // Pipes
-  app.useGlobalPipes(
+  /*app.useGlobalPipes(
     new ValidationPipe({
-      whitelist: true,
+      // whitelist: true,
       transform: true,
-      forbidNonWhitelisted: true,
+      // forbidNonWhitelisted: true,
       transformOptions: { enableImplicitConversion: true },
     }),
-  );
+  );*/
 
   // Swagger
   const config = new DocumentBuilder()
